@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="livroApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="app/lib/jquery.min.js"></script>
+  <script src="app/lib/bootstrap.min.js"></script>
+  <script src="app/lib/angular.min.js"></script>
+  <script src="app/lib/angular-route.min.js"></script>
+  <script src="app/lib/angular-resource.js"></script>
+  <script src="app/lib/angular-ui-router.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/directives/directives.js"></script>
+  <script src="app/controllers/principal.js"></script>
+  <script src="app/controllers/livro.js"></script>
+  <script src="app/controllers/autor.js"></script>
+  <script src="app/controllers/mutuario.js"></script>
+  <script src="app/controllers/emprestimo.js"></script>
+  <script src="app/services/livro.js"></script>
+  <script src="app/services/autor.js"></script>
+  <script src="app/services/mutuario.js"></script>
+  <script src="app/services/emprestimo.js"></script>
+  <link rel="stylesheet" href="app/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app/css/bootstrap-theme.min.css">
+  <title>Início</title>
+</head>
+<body >
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Exibir a navegação</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Meus livros</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li navbar-active="principal" ><a href="#principal">Home</a></li>
+          <li navbar-active="livros" ><a href="#livros">Livros</a></li>
+          <li navbar-active="autores" ><a href="#autores">Autores</a></li>
+          <li navbar-active="mutuarios"><a href="#mutuarios">Mutuarios</a></li>
+          <li navbar-active="emprestimos"><a href="#emprestimos">Emprestimos</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container theme-showcase" role="main" ui-view>
+
+
+
+  </div>
+</body>
+</html>

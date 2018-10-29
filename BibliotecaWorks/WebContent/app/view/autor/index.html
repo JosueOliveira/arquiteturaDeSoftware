@@ -1,0 +1,29 @@
+<div class="alert alert-success alert-dismissible" role="alert" ng-show="successMessage">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  {{successMessage}}
+</div>
+
+<div class="form-group">
+  <a class="btn btn-success" ui-sref="novoAutor">Novo autor</a>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>
+        Nome
+      </th>
+      <th>
+        Nacionalidade
+      </th>
+      <th>
+        Ações
+      </th>
+    </tr>
+  </thead>
+  <tr ng-repeat="autor in autores">
+    <td><ser-tooltip nacionalidade="{{autor.nacionalidade}}" nome="{{autor.nome}}"></ser-tooltip></td>
+    <td><div ser-brasil valor="{{autor.nacionalidade}}"></div></td>
+    <td><a class="btn btn-primary" ui-sref="editarAutor({ id: autor.id })">Editar</a></td>
+  </tr>
+</table>

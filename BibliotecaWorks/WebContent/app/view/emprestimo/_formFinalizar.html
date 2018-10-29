@@ -1,0 +1,22 @@
+<div class="alert alert-danger alert-dismissible" role="alert" ng-show="errorMessage">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  {{errorMessage}}
+</div>
+<div class="form-group">
+  <label for="mutuario">Mutuario</label>
+  <select class="form-control" id="mutuario" ng-model="emprestimo.mutuario.id" ng-disabled="true" ng-options="obj.id as obj.nome for obj in mutuarios" ng-required="true"></select>
+</div>
+<div class="form-group">
+  <label for="livro">livro</label>
+  <select class="form-control" id="livro" ng-model="emprestimo.livro.id" ng-disabled="true" ng-options="obj.id as obj.titulo for obj in livros" ng-required="true"></select>
+</div> 
+<div class="form-group"> 
+  <input type="date" class="form-control" id="dataDevolucao" placeholder="Data" ng-model="emprestimo.dataDevolucao" ng-show="false">
+</div>
+<div class="form-group"> 
+  <input type="date" class="form-control" id="dataPrevistaDevolucao" placeholder="Data" ng-model="emprestimo.dataPrevistaDevolucao" ng-show="false">
+</div>
+<div class="form-group"> 
+  <input type="checkbox" class="form-control" id="devolucao" ng-model="emprestimo.devolucao" ng-show="false">
+</div>
+<button type="submit" class="btn btn-default">Devolver</button>
